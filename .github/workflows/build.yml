@@ -8,13 +8,14 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '22'
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          gradle-version: '8.7'
+          java-version: '17'
       - name: Build
-        run: gradle assembleDebug
+        run: |
+          wget -q https://services.gradle.org/distributions/gradle-8.7-bin.zip
+          unzip -q gradle-8.7-bin.zip
+          export PATH=$PWD/gradle-8.7/bin:$PATH
+          export JAVA_HOME=$JAVA_HOME_17_X64
+          gradle assembleDebug
       - uses: actions/upload-artifact@v4
         with:
           name: mi-apk
