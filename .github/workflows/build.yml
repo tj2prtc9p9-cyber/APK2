@@ -12,6 +12,8 @@ jobs:
       - name: Build
         run: |
           ls -R
+          cp App/build.gradle app/build.gradle || true
+          rm -rf App
           wget -q https://services.gradle.org/distributions/gradle-8.7-bin.zip
           unzip -q gradle-8.7-bin.zip
           export PATH=$PWD/gradle-8.7/bin:$PATH
