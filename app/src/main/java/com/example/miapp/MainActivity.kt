@@ -25,6 +25,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+fun ejecutarMiScript(context:
+android.content.context) {
+    android.widget.Toast.makeText(context,
+                                  "!script ejecutado bro!"
+                                  android.widget.Toast.LENGTH_SHORT).show()
+}
 
 @Composable
 fun PinkyMenu() {
