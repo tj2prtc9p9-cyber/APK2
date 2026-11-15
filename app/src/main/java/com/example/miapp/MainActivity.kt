@@ -88,7 +88,7 @@ fun PinkyMenu() {
 }
 
 @Composable
-fun TabButton(titulo: String, subtitulo: String, seleccionado: Boolean, onClick: () -> Unit) {
+fun RowScope.TabButton(titulo: String, subtitulo: String, seleccionado: Boolean, onClick: () -> Unit) {
     Column(
         modifier = Modifier.weight(1f).padding(4.dp).clip(RoundedCornerShape(16.dp))
             .background(if (seleccionado) Color.White.copy(alpha = 0.25f) else Color.Transparent)
