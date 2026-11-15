@@ -1,4 +1,11 @@
-name: Build APK
+      - name: Build
+        run: |
+          ls -R
+          wget -q https://services.gradle.org/distributions/gradle-8.7-bin.zip
+          unzip -q gradle-8.7-bin.zip
+          export PATH=$PWD/gradle-8.7/bin:$PATH
+          export JAVA_HOME=$JAVA_HOME_17_X64
+          gradle assembleDebugname: Build APK
 on: [push]
 jobs:
   build:
