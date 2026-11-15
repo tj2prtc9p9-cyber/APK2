@@ -1,4 +1,4 @@
-package com.example.apk2
+package com.example.miapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
