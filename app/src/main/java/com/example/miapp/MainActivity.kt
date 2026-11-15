@@ -121,6 +121,16 @@ fun FeatureRow(titulo: String, subtitulo: String) {
             Text(subtitulo, color = Color.White.copy(alpha = 0.7f), fontSize = 12.sp)
             Text(if (encendido) "Encendido" else "Apagado", color = Color.White.copy(alpha = 0.5f), fontSize = 11.sp)
         }
-        Switch(checked = encendido, onCheckedChange = { encendido = it })
+        Switch(checked = encendido,
+        onCheckedChange = { nuevo->
+            encendido = nuevo
+            if (nuevo) {
+                ejecutarMiScript()
+            }
+        })
     }
 }
+     
+fun ejecutarMiScript() {
+            println("!script ejecutado bro!")
+        }
