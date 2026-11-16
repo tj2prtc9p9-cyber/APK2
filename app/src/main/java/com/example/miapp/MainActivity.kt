@@ -41,7 +41,7 @@ fun PinkyMenu() {
     Box(modifier = Modifier.fillMaxSize().background(Color(0xFF1A0B2E))) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
-                "PINKY MODZ",
+                "LOS INTOCABLES",
                 color = Color.Cyan,
                 fontWeight = FontWeight.Black,
                 fontSize = 22.sp,
