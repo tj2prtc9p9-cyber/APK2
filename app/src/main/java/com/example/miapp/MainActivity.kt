@@ -25,11 +25,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-fun ejecutarMiScript(context:
-android.content.context) {
-    android.widget.Toast.makeText(context,
-                                  "!script ejecutado bro!"
-                                  android.widget.Toast.LENGTH_SHORT).show()
+fun ejecutarMiScript(context: android.content.Context) {
+    android.widget.Toast.makeText(
+        context,
+        "!script ejecutado",
+        android.widget.Toast.LENGTH_SHORT
+    ).show()
 }
 
 @Composable
