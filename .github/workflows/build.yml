@@ -21,5 +21,5 @@ jobs:
           gradle assembleDebug
       - uses: actions/upload-artifact@v4
         with:
-          name: mi-apk
+          name: PERRA PUTA
           path: app/build/outputs/apk/debug/*.apk
